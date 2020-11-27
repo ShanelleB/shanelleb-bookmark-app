@@ -1,0 +1,291 @@
+body {
+    margin:0px;
+    padding:0px;
+    height:100%;
+    width:100%;
+    min-width:300px;
+    min-height:100vh;
+    display:flex;
+    flex-direction: column;
+    justify-content:space-between;
+    background-image: url('/shanelleb-bookmark-app/src/images/bookmarkBackground.jpg');
+    font-family: 'cursive';
+  }
+  .edit {
+    display:flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items:center;
+    width:inherit;
+  }
+  .big-container {
+    padding-top:10px;
+    width:80%;
+    margin-right:auto;
+    margin-left:auto;
+    margin-bottom:10px;
+    background-color: #e8dcf75b;
+    border: 5px solid #faedf7;
+    border-radius: 15px;
+    box-shadow:2px 5px #d8a8f8d7;
+  }
+  
+  .hidden {
+    display:none;
+  }
+  h1 {
+    font-size:45px;
+    text-align:center;
+    margin:10px
+  }
+  h1, h2 {
+    font-family: 'Grandstander', cursive;
+  }
+  button,#filter {
+    width:auto;
+    height:auto;
+    padding:3px 18px;
+    font-size:16px;
+    color: rgb(129, 98, 133);
+    background-color: #f5f3f7b7;
+    border-radius: 5px;
+    border:2px solid #f8c9ec;
+  }
+  .cancel-form, .submit-form {
+    margin-top:10px;
+  }
+  
+  .buttons {
+    width:100%;
+    margin-left:auto;
+    margin-right: auto;
+    height:auto;
+    display:flex;
+    justify-content:space-evenly;
+    font-size:16px;
+    
+    
+  }
+  .bookmarks-list {
+    display:flex;
+    flex-direction:column;
+    margin-right:auto;
+    margin-left:auto;
+    padding-left:0px;
+    justify-self:start;
+    align-content: center;
+    
+  }
+  
+  .list-item {
+    background-color:  #f5f3f7b7;
+    border: 5px solid #f8c9ec;
+    border-radius: 15px;
+    box-shadow:2px 5px #89799e;
+    list-style:none;
+    margin:15px auto;
+    padding:0 0px 0px 5px;
+    width:95%;
+    align-self:center;
+  }
+  .expanded {
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:space-between;
+    width:auto;
+    height:100%;
+    margin-top:10px;
+  
+  }
+  form {
+    display:flex;
+    flex-direction:column;
+    justify-content:space-around;
+    align-items:center;
+    width:auto;
+    margin:auto;
+  }
+  .newPage {
+    width:75% !important;
+  }
+  fieldset {
+    width:auto;
+  }
+  input[type='text'] {
+    width:auto;
+  }
+  main {
+    margin-left:auto;
+    margin-right:auto;
+    display:flex;
+    flex-direction:column;
+    
+    width:100%;
+  }
+  
+  .expandDown {
+    width:auto;
+    height:50%;
+    
+  }
+  .button-wrapper {
+    width:100%;
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-end;
+  }
+  .rating-wrapper {
+    width:auto;
+    height:auto;
+    display:flex;
+    justify-content:center;
+  }
+  
+  footer {
+    margin-top:5px;
+    width:100%;
+    height:auto;
+    text-align:center;
+    padding:10px 0px;
+    border-top: 5px solid #f8c9ec;
+  }
+  header {
+    width:100%;
+    height:100%;
+    margin-top:0px;
+    margin-bottom:10px;
+    text-align:center;
+    border-bottom: 5px solid #f8c9ec;
+  }
+  header, footer {
+    background-color: #f5f3f7b7;
+  }
+  .rating-wrapper:not(:checked) > label:before {
+    color:black;
+  }
+  fieldset {
+    text-align:center;
+  }
+ 
+  
+  .rating {
+      float:left;
+  
+  }
+  
+
+  .rating:not(:checked) > input {
+      position:absolute;
+      top:-9999px;
+      clip:rect(0,0,0,0);
+  }
+  
+  .rating:not(:checked) > label {
+      float:right;
+      width:.88em;
+      
+      overflow:hidden;
+      white-space:nowrap;
+      cursor:pointer;
+      font-size:200%;
+      line-height:1.2;
+      color:black;
+      text-shadow:1px 1px #f5f3f7b7, 2px 2px #666, .1em .1em .2em rgba(0,0,0,.5);
+  }
+  
+  .rating:not(:checked) > label:before {
+    background: url(/shanelleb-bookmark-app/src/images/emptystar.png) no-repeat 0px 0px;
+      
+  }
+  
+  .rating > input:checked ~ label {
+    background: url(/shanelleb-bookmark-app/src/images/star.png) no-repeat 0px 0px;
+  }
+  
+  .rating:not(:checked) > label:hover,
+  .rating:not(:checked) > label:focus,
+  .rating:not(:checked) > label:hover ~ label,
+  .rating:not(:checked) > label:focus ~ label {
+      color: black;
+      text-shadow: url(/shanelleb-bookmark-app/src/images/star.png), .1em .1em .2em rgba(0,0,0,.5);
+  }
+  
+  .rating > input:checked + label:hover,
+  .rating > input:checked + label:hover ~ label,
+  .rating > input:checked ~ label:hover,
+  .rating > input:checked ~ label:hover ~ label,
+  .rating > label:hover ~ input:checked ~ label,
+  .rating > input:checked + label:focus,
+  .rating > input:checked + label:focus ~ label,
+  .rating > input:checked ~ label:focus,
+  .rating > input:checked ~ label:focus ~ label,
+  .rating > label:focus ~ input:checked ~ label {
+
+      text-shadow: url(/shanelleb-bookmark-app/src/images/star.png), .1em .1em .2em rgba(0,0,0,.5);
+  }
+  
+  .rating > label:active {
+      position:relative;
+      top:2px;
+      left:2px;
+    
+  }
+  @media all and (min-width:550px) {
+    .bookmarks-list {
+      box-sizing: border-box;
+      display:grid;
+      grid-gap:10px 20px;
+      grid-template-columns: 1fr 1fr;
+      width:auto;
+      height:100%;
+      margin: 10px;
+      padding:5px 15px;
+      
+    }
+    .list-item {
+      box-sizing: border-box;
+      min-width:225px;
+      width: 100%;
+      height:auto;
+      margin:auto;
+      padding:auto;
+      
+    }
+    .newPage {
+    width:50% !important;
+    margin:15px;
+  }
+    .edit-delete {
+      width:15%;
+    }
+    main {
+      width:auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items:center;
+    }
+    .big-container {
+      width:85%;
+      
+    }
+    form {
+      margin:10px 5px;
+      padding-bottom:10px
+    }
+  }
+  
+  @media all and (min-width:910px) {
+    .bookmarks-list {
+      box-sizing: border-box;
+      display:grid;
+      grid-gap:10px 20px;
+      grid-template-columns: 1fr 1fr 1fr;
+      width:auto;
+      height:100%;
+      margin:10px;
+      padding:5px 15px;
+      
+    }
+  }
